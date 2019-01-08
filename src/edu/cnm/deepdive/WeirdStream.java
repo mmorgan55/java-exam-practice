@@ -1,8 +1,6 @@
 package edu.cnm.deepdive;
 
-import java.security.SecureRandom;
 import java.util.Random;
-import java.util.function.IntConsumer;
 import java.util.function.IntSupplier;
 import java.util.stream.IntStream;
 
@@ -22,6 +20,8 @@ public class WeirdStream {
       }
     })
         .limit(1000)
+        .boxed()
+        .sorted()
         .forEach(System.out::println);
   }
 
